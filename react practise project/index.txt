@@ -1,0 +1,38 @@
+jika memanggil function di react tidak perlu menggunakan ().
+
+sample function
+ function clickHandler() {
+    console.log("You clicked me!");
+  }
+
+  pemanggilanya hanya seperti ini saja tidak perlu menggunakan () dalam click handler misal {clickHandler()}
+   return (
+    <li>
+      <button onClick={clickHandler}>{children}</button>
+    </li>
+  );
+
+
+menggunakan component props
+
+props itu bisa di ada 2 dalam 1 function penting sesuai dengan pemanggilannya
+
+
+<HoverButton onSelect={handleTriggerSelect}>Click me!</HoverButton>
+
+onSelect={handleTriggerSelect} => ini sebagai props value
+
+
+jadi di dalam funtion ini, jika kita klick button hanlderTriggerSelected itu bisa di berikan argument yang nantinya bisa mengambil datanya itu punya siapa.
+
+jika kita ingin mengarah di suaru function juga bisa menggunakan =>.
+kita juga bisa memanggil function di dalam props dengan menggunakan ()=> dan functionnya(). jika ingin memanggil name funtionnya dari mana bebas ingin menggunakan yang mana
+
+function sebagai props tanpa argument: 
+onClick = {handleClick}
+
+function sebagai props tapi punya argument:
+onClick = {() => handleClick("arg1")}
+
+
+react component hanya dpat di eksekusi 1 kali saja.
